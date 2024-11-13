@@ -65,6 +65,8 @@
 }
 
 .button {
+    display: flex;
+    align-items: center;
     background: #0ce48d;
     padding: 10px 20px;
     border: none;
@@ -83,6 +85,11 @@
 }
 
 @media screen and (max-width: 968px) {
+    /*Overwrite the wierd little grey line on the burger button provided by Font Awesome and remove it*/
+    .fa-bars {
+        line-height: normal !important;
+    }
+
     .navbar__toggle {
         display: block;
         position: absolute;
@@ -122,6 +129,32 @@
     .navbar__item {
         width: 100%;
         display: flex;
+        justify-content: center;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Sign Up Button */
+    .navbar__btn.desktop {
+        display: none;
+    }
+
+    .navbar__btn.mobile {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        width: 100%;
+    }
+
+    .button {
+        width: 80%;
+        height: 60px;
         justify-content: center;
     }
 }
