@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bankster - Digital Bank</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome Link for Button Images -->
-    <script src="https://kit.fontawesome.com/227abf0ed1.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <nav class="navar" role="navigation" aria-label="Main navigation"></nav>
-            <div class="navbar__container">
-                <a href="/" id="navbar-logo">Bankster</a> <!-- href directs to a specific website, in this case only back to the homepage-->
-                <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a href="/" class="navbar__links">Home</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/services.html" class="navbar__links">Services</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/pricing.html" class="navbar__links">Pricing</a>
-                    </li>
-                    <li class="navbar__btn mobile">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bankster - Digital Bank</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Font Awesome Link for Button Images -->
+        <script 
+            src="https://kit.fontawesome.com/227abf0ed1.js" 
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navar" role="navigation" aria-label="Main navigation"></nav>
+                <div class="navbar__container">
+                    <a href="/" id="navbar-logo">Bankster</a> <!-- href directs to a specific website, in this case only back to the homepage-->
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            <a href="/" class="navbar__links">Home</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/services.html" class="navbar__links">Services</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/pricing.html" class="navbar__links">Pricing</a>
+                        </li>
+                        <li class="navbar__btn mobile">
+                            <a href="/signup.html" class="button">Sign Up</a>
+                        </li>
+                    </ul>
+
+                    <div class="navbar__btn desktop">
                         <a href="/signup.html" class="button">Sign Up</a>
-                    </li>
-                </ul>
+                    </div>
 
-                <div class="navbar__btn desktop">
-                    <a href="/signup.html" class="button">Sign Up</a>
+                    <button 
+                        class="navbar__toggle" 
+                        id="mobile-menu" 
+                        aria-label="Toggle Naviation" 
+                        aria-expanded=""
+                        false
+                    >
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
                 </div>
+        </header>
 
-                <button class="navbar__toggle" id="mobile-menu" aria-label="Toggle Naviation" aria-expanded=""false>
+        <!-- Hero Section -->'
+        <main>
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__content">
+                        <h1>Easiest way to open a digital bank account</h1>
+                        <p>
+                            Join today and receive $250 in credits. Valid for new customers 
+                            only in select states.
+                        </p>
+                        <button class="hero__btn">Sign Up</button>
+                    </div>
+                    <div class="hero__image">
+                        <img 
+                        id="hero-img"
+                        src="/images/hero-pic-1.svg" 
+                        alt="Illustration of credit card"
+                        /> <!-- Image is from https://undraw.co/search -->
+                    </div>
+                </div>
+            </section>
 
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
+<!-- Rotating Logos Section -->
+            <div class="rotating-logos"> 
+                <div class="rotating-logos__track">
+                    <span class="logo-text">LEGION</span>
+                    <span class="logo-text">TRUST</span>
+                    <span class="logo-text">DISTRITOR</span>
+                    <span class="logo-text">VENTURX</span>
+                    <span class="logo-text">CAPITAL</span>
+                    <span class="logo-text">HEDGIES</span>
+                </div>
             </div>
-    </header>
+        </main>
 
-    <!-- Hero Section -->'
-    <main>
-        <section class="hero">
-            <div class="hero__container">
-                <div class="hero__content">
-                    <h1>Easiest way to open a digital bank account</h1>
-                    <p>Join today and receive $250 in credits. Valid for new customers only in select states.</p>
-                    <button class="hero__btn">Sign Up</button>
-                </div>
-                <div class="hero__image">
-                    <img 
-                    id="hero-img"
-                    src="/images/hero-pic-1.svg" 
-                    alt="Illustration of credit card"
-                    /> <!-- Image is from https://undraw.co/search -->
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <script src="app.js"></script>
-</body>
+        <script src="app.js"></script>
+    </body>
 </html>
