@@ -85,8 +85,7 @@
 }
 
 @media screen and (max-width: 968px) {
-    /*Overwrite the wierd little grey line on the burger button provided by Font Awesome and remove it*/
-    .fa-bars {
+    .fa-bars { /*Overwrite the wierd little grey line on the burger button provided by Font Awesome and remove it*/
         line-height: normal !important;
     }
 
@@ -156,5 +155,103 @@
         width: 80%;
         height: 60px;
         justify-content: center;
+    }
+}
+
+/* Hero CSS  */
+.hero {
+    background-color: #141414;
+}
+
+.hero__container {
+    display:grid;
+    grid-template-columns: 1fr 1fr; /*left ,right*/
+    align-items: center;
+    margin: 0 auto;
+    height: 95vh; /*viewport height, which is about 90%*/
+    width: 100%;
+    padding: 0 50px;
+    max-width: 1300px;
+}
+
+.hero__content {
+    color: #fff;
+}
+
+.hero__content h1 { /*Targets specifically content in h1 even tho there is no class id*/
+    font-size: 4rem;
+}
+
+.hero__content p {
+    margin-top: 1rem; /*Spacing between p content and the h1*/
+    font-size: 1.2rem;
+}
+
+.hero__btn {
+    font-size: 1rem;
+    background: #0ce48d;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px; /*Curves the borders by 4px so it is not so sharp*/
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.hero__btn:hover {
+    background-color: #0ba467;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero__image {
+    text-align: center;
+}
+
+#hero-img {
+    height: 80%;
+    width: 80%;
+}
+
+/* Hero Mobile Responsive CSS */
+@media screen and (max-width: 768px){
+    .hero__container{
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 120px 0px;
+    }
+
+    .hero__content {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 0 2rem;
+    }
+
+    .hero__content hr {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .hero__content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero__container {
+        width: 100vw; /*100 viewpoint width*/
+        padding: 60px 0;
+    }
+
+    .hero__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    } /*hero content p can be ignored, since 1.5rem looks fine from an earlier @media*/
+
+    .hero__btn{
+        padding: 12px 36px;
+        margin: 2.5rem 0;
     }
 }
