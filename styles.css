@@ -359,3 +359,95 @@
         font-size: 1.5rem;
     }
 }
+
+/* Pricing Plans CSS */
+.services {
+    text-align: center;
+    padding: 2rem 1rem;
+    z-index: 1;
+    background-color: purple;
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+}
+
+.pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.pricing-toggle .toggle-option {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.pricing-toggle .save-percentage-container {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-toggle .save-percentage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0ce48d;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 22px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0ce48d;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #0ce48d;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
