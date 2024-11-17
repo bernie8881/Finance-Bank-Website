@@ -26,6 +26,10 @@ function switchPricing() {
         yearlyPrices.forEach((price) => price.classList.add("hidden"))
         yearlyDiscount.style.display = "none"
     }
-
-
 }
+
+window.addEventListener("load", () => {
+    const yearElement = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    yearElement.textContent = currentYear;
+}); // For the <span id="year"></span> in index.html to display the current year without hardcoding
