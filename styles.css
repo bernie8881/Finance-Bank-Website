@@ -433,7 +433,7 @@
     content: "";
     height: 22px;
     width: 22px;
-    left: 22px;
+    left: 4px;
     bottom: 4px;
     background-color: #fff;
     transition: 0.4s;
@@ -450,4 +450,150 @@ input:focus + .slider {
 
 input:checked + .slider:before {
     transform: translateX(30px);
+}
+
+.services {
+    background: #000;
+    padding: 100px 0px;
+}
+
+.services h2 {
+    color: #fff;
+    font-size: 4rem;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.services__card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.services__card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.services_card p {
+    margin-bottom: 1rem;
+    color: rgb(36, 40, 36);
+}
+
+.services__card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.services__card ul li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.card-price {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.card-price .price {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.price-btn {
+    display: inline-block;
+    background-color: #0ce48d;
+    border: none;
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-decoration: none;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.price-btn:hover {
+    background-color: #0ba467;
+}
+
+#small-desc {
+    font-size: 1rem;
+    color: #999;
+    text-align: center;
+    padding: 8px 0px;
+}
+
+.card-features {
+    text-align: left;
+}
+
+.card-features ul li {
+    font-size: 1rem;
+    color: #7c7c7c;
+}
+
+.save-percentage {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Pricing Plans Mobile-CSS */
+@media (max-width: 968px) {
+    .services__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services__card {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
+
+    .services h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services__card {
+        width: 90%;
+    }
+    .services h2 {
+        padding: 0 24px;
+        font-size: 2rem;
+    }
+
+    .pricing-toggle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-toggle .save-percentage-container{
+        margin-top: 0.5rem;
+        justify-content: center;
+    }
+
 }

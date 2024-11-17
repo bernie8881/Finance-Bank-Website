@@ -9,3 +9,23 @@ menu.addEventListener("click", function (){
 // Function that moves the logos
 const logos = document.querySelector(".rotating-logos__track").cloneNode(true)
 document.querySelector(".rotating-logos").appendChild(logos);
+
+// Monthly Year Plan Toggle-Function
+function switchPricing() {
+    const checkbox = document.getElementById("pricing-toggle-checkbox"); // The id of the input for pricing-toggle button from index.html
+    const monthlyPrices = document.querySelectorAll(".monthly-price"); // Target those with the monthly-price class
+    const yearlyPrices = document.querySelectorAll(".yearly-price");
+    const yearlyDiscount = document.querySelector(".save-percentage");
+
+    if(checkbox.checked) {
+        monthlyPrices.forEach((price) => price.classList.add("hidden"))
+        yearlyPrices.forEach((price) => price.classList.remove("hidden"))
+        yearlyDiscount.style.display = "inline"
+    } else {
+        monthlyPrices.forEach((price) => price.classList.remove("hidden"))
+        yearlyPrices.forEach((price) => price.classList.add("hidden"))
+        yearlyDiscount.style.display = "none"
+    }
+
+
+}
